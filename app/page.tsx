@@ -14,6 +14,50 @@ const featuredWorks = featuredOrder.map((number) => works[number - 1]);
 const remainingWorks = works.filter((work) => !featuredWorks.includes(work));
 const allWorks = [...featuredWorks, ...remainingWorks];
 
+// Демонстрационные отзывы для черновика. Перед публикацией заменить на реальные.
+const reviews = [
+  {
+    name: "Александр",
+    text: "Делали навес вдоль дома. Всё обсудили заранее, по размерам подошло точно. Отдельно понравилось, что после монтажа участок оставили в порядке.",
+  },
+  {
+    name: "Марина",
+    text: "Нужен был навес над террасой, чтобы летом можно было сидеть и в дождь. Получилось аккуратно и по цвету хорошо подошло к дому. Спасибо за работу!",
+  },
+  {
+    name: "Сергей",
+    text: "Отправил фото места и примерные размеры, дальше всё подсказали. Сделали крепкую конструкцию, ничего не шатается, выглядит добротно.",
+  },
+  {
+    name: "Ольга",
+    text: "Заказывали навес на дачу. Я переживала, что конструкция будет выглядеть слишком тяжёлой, но получилось довольно легко и аккуратно. Результатом довольны.",
+  },
+  {
+    name: "Дмитрий",
+    text: "Сделали навес для машины. Сроки соблюдены, размеры и цвет заранее согласовали. Уже прошёл сильный дождь — всё отлично, вода уходит как надо.",
+  },
+  {
+    name: "Наталья",
+    text: "Хотели закрыть небольшую хозяйственную площадку у дома. Предложили простой и нормальный по цене вариант, без лишних деталей. Именно то, что было нужно.",
+  },
+  {
+    name: "Игорь",
+    text: "Обратился по рекомендации соседей. Навес изготовили по нашим размерам, установили ровно и аккуратно. Видно, что человек отвечает за свою работу.",
+  },
+  {
+    name: "Елена",
+    text: "Спасибо за навес над входом и частью двора. Стало намного удобнее, особенно в дождливую погоду. Все вопросы решали напрямую, без долгих ожиданий.",
+  },
+  {
+    name: "Андрей",
+    text: "Участок непростой, места мало, поэтому стандартный вариант не подходил. По фотографиям предложили решение, потом всё подогнали на месте. Получилось хорошо.",
+  },
+  {
+    name: "Виктория",
+    text: "Долго выбирали, кому заказать навес для зоны отдыха. Здесь понравился спокойный подход: всё объяснили, согласовали и сделали без неприятных сюрпризов.",
+  },
+];
+
 const serviceTypes = [
   {
     number: "01",
@@ -192,7 +236,7 @@ export default function Home() {
           </h1>
           <p className="hero-lead">
             Изготавливаю и устанавливаю металлические навесы по индивидуальным
-            размерам в <span className="placeholder">[городе и области]</span>.
+            размерам в <span className="placeholder">Санкт-Петербурге и Ленинградской области</span>.
           </p>
           <p className="hero-copy">
             Для частных домов, дач, террас, зон отдыха и хозяйственных площадок.
@@ -316,6 +360,32 @@ export default function Home() {
           <a className="button button-accent" href="#contact">
             Хочу похожий навес <span aria-hidden="true">→</span>
           </a>
+        </div>
+      </section>
+
+      <section className="reviews section" aria-labelledby="reviews-title">
+        <div className="shell">
+          <div className="reviews-heading">
+            <div className="eyebrow"><span /> Отзывы</div>
+            <h2 id="reviews-title">Отзывы заказчиков</h2>
+          </div>
+          <div className="reviews-grid">
+            {reviews.map((review) => (
+              <article className="review-card" key={review.name}>
+                <span className="review-avatar" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" focusable="false">
+                    <circle cx="12" cy="8" r="4" />
+                    <path d="M4.5 21c.5-5 3-7.5 7.5-7.5s7 2.5 7.5 7.5" />
+                  </svg>
+                </span>
+                <div className="review-content">
+                  <h3>{review.name}</h3>
+                  <div className="review-stars" aria-label="5 из 5 звёзд">★★★★★</div>
+                  <p>{review.text}</p>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -466,27 +536,22 @@ export default function Home() {
             задачу, уточню детали и сообщу стоимость индивидуально.
           </p>
           <div className="contact-links">
-            <a href="#contact" aria-label="Телефон — добавить номер">
+            <a href="tel:+79022017484" aria-label="Позвонить по телефону +7 902 201-74-84">
               <span>Телефон</span>
-              <strong>[номер телефона]</strong>
+              <strong>+7 (902) 201-74-84</strong>
               <i aria-hidden="true">↗</i>
             </a>
-            <a href="#contact" aria-label="WhatsApp — добавить ссылку">
-              <span>WhatsApp</span>
-              <strong>[номер или ссылка]</strong>
-              <i aria-hidden="true">↗</i>
-            </a>
-            <a href="#contact" aria-label="Telegram — добавить ссылку">
-              <span>Telegram</span>
-              <strong>[имя пользователя или ссылка]</strong>
+            <a href="https://max.ru/" target="_blank" rel="noreferrer" aria-label="Открыть MAX">
+              <span>MAX</span>
+              <strong>Написать в MAX</strong>
               <i aria-hidden="true">↗</i>
             </a>
           </div>
           <div className="location-line">
             <span aria-hidden="true">⌖</span>
-            Работаю в: <strong>[город и районы]</strong>
+            Работаю в: <strong>Санкт-Петербурге и Ленинградской области</strong>
           </div>
-          <a className="button button-accent contact-button" href="#contact">
+          <a className="button button-accent contact-button" href="https://max.ru/" target="_blank" rel="noreferrer">
             Написать и узнать стоимость <span aria-hidden="true">→</span>
           </a>
         </div>

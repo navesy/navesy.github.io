@@ -16,7 +16,11 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 90px;
+  scroll-padding-top: 0;
+}
+
+section[id] {
+  scroll-margin-top: 0;
 }
 
 body {
@@ -677,6 +681,85 @@ h1 em {
   padding-top: 55px;
 }
 
+.reviews {
+  background: #f7f7f7;
+}
+
+.reviews-heading {
+  display: grid;
+  grid-template-columns: 0.55fr 1.45fr;
+  align-items: end;
+  margin-bottom: 52px;
+}
+
+.reviews-heading .eyebrow {
+  margin-bottom: 12px;
+}
+
+.reviews-heading h2 {
+  margin: 0;
+  font-size: clamp(3rem, 5vw, 5.8rem);
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.review-card {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 16px;
+  min-height: 230px;
+  padding: 26px;
+  border: 1px solid #dddddd;
+  border-radius: 18px;
+  background: #fff;
+}
+
+.review-avatar {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  border-radius: 50%;
+  background: #eceff2;
+  color: #a4a8ad;
+}
+
+.review-avatar svg {
+  width: 27px;
+  height: 27px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
+}
+
+.review-content h3 {
+  margin: 1px 0 5px;
+  font-size: 1.05rem;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+
+.review-stars {
+  margin-bottom: 10px;
+  color: #f8c73a;
+  font-size: 1.08rem;
+  letter-spacing: 0.08em;
+  line-height: 1;
+}
+
+.review-content p {
+  margin: 0;
+  color: #2b2b2b;
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
 .lightbox {
   position: fixed;
   z-index: 100;
@@ -1274,6 +1357,7 @@ h1 em {
   .intro,
   .section-heading,
   .works-intro,
+  .reviews-heading,
   .pricing-layout,
   .benefits-layout,
   .estimate-card,
@@ -1293,6 +1377,7 @@ h1 em {
   .gallery-card-6 { grid-column: span 4; grid-row: span 3; }
   .gallery-actions { flex-direction: column; }
   .gallery-actions .button { width: 100%; }
+  .reviews-grid { grid-template-columns: 1fr; }
   .pricing-photo,
   .pricing-photo img { min-height: 520px; height: 520px; }
   .pricing-photo { position: relative; top: 0; }
@@ -1334,6 +1419,9 @@ h1 em {
   .service-card { min-height: 360px; }
   .service-card-top { height: 110px; }
   .works-intro { gap: 28px; }
+  .reviews-heading { grid-template-columns: 1fr; gap: 8px; margin-bottom: 36px; }
+  .review-card { min-height: 0; padding: 22px 18px; grid-template-columns: 44px 1fr; gap: 13px; }
+  .review-avatar { width: 42px; height: 42px; }
   .gallery { display: grid; grid-auto-rows: auto; grid-template-columns: 1fr; gap: 8px; }
   .gallery-card,
   .gallery-card-1,
