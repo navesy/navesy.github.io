@@ -212,7 +212,12 @@ export default function Home() {
           <a href="#process">Как работаю</a>
           <a href="#faq">Вопросы</a>
         </nav>
-        <a className="header-cta" href="#contact">
+        <a
+          className="header-cta"
+          href="https://max.ru/u/f9LHodD0cOLp_a9SVMji4c9iNfmVCG6nS6cxasxneQCp5vhRoxz6g7eTa-o"
+          target="_blank"
+          rel="noreferrer"
+        >
           Получить расчёт <span aria-hidden="true">↗</span>
         </a>
       </header>
@@ -244,7 +249,12 @@ export default function Home() {
             пожеланий заказчика.
           </p>
           <div className="hero-actions">
-            <a className="button button-accent" href="#contact">
+            <a
+              className="button button-accent"
+              href="https://max.ru/u/f9LHodD0cOLp_a9SVMji4c9iNfmVCG6nS6cxasxneQCp5vhRoxz6g7eTa-o"
+              target="_blank"
+              rel="noreferrer"
+            >
               Получить расчёт <span aria-hidden="true">→</span>
             </a>
             <a className="text-link" href="#works">
@@ -536,12 +546,8 @@ export default function Home() {
             задачу, уточню детали и сообщу стоимость индивидуально.
           </p>
           <div className="contact-links">
-            <a href="tel:+79022017484" aria-label="Позвонить по телефону +7 902 201-74-84">
-              <span>Телефон</span>
-              <strong>+7 (902) 201-74-84</strong>
-              <i aria-hidden="true">↗</i>
-            </a>
-            <a href="https://max.ru/" target="_blank" rel="noreferrer" aria-label="Открыть MAX">
+
+            <a href="https://max.ru/u/f9LHodD0cOLp_a9SVMji4c9iNfmVCG6nS6cxasxneQCp5vhRoxz6g7eTa-o" target="_blank" rel="noreferrer" aria-label="Открыть MAX">
               <span>MAX</span>
               <strong>Написать в MAX</strong>
               <i aria-hidden="true">↗</i>
@@ -551,7 +557,7 @@ export default function Home() {
             <span aria-hidden="true">⌖</span>
             Работаю в: <strong>Санкт-Петербурге и Ленинградской области</strong>
           </div>
-          <a className="button button-accent contact-button" href="https://max.ru/" target="_blank" rel="noreferrer">
+          <a className="button button-accent contact-button" href="https://max.ru/u/f9LHodD0cOLp_a9SVMji4c9iNfmVCG6nS6cxasxneQCp5vhRoxz6g7eTa-o" target="_blank" rel="noreferrer">
             Написать и узнать стоимость <span aria-hidden="true">→</span>
           </a>
         </div>
@@ -571,7 +577,12 @@ export default function Home() {
         </div>
       </footer>
 
-      <a className="mobile-cta" href="#contact">
+      <a
+        className="mobile-cta"
+        href="https://max.ru/u/f9LHodD0cOLp_a9SVMji4c9iNfmVCG6nS6cxasxneQCp5vhRoxz6g7eTa-o"
+        target="_blank"
+        rel="noreferrer"
+      >
         Получить расчёт <span aria-hidden="true">→</span>
       </a>
 

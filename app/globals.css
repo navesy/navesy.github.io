@@ -1406,7 +1406,13 @@ h1 em {
   .hero-image { object-position: 58% center; }
   .hero-shade { background: linear-gradient(90deg, rgba(12, 13, 11, 0.93), rgba(12, 13, 11, 0.52)), linear-gradient(0deg, rgba(10, 10, 9, 0.76), transparent 50%); }
   .hero-content { padding-top: 98px; padding-bottom: 105px; }
-  .hero h1 { margin-bottom: 30px; font-size: clamp(3.45rem, 17.3vw, 5.2rem); }
+  .hero h1 {
+    max-width: 100%;
+    margin-bottom: 30px;
+    font-size: clamp(2.55rem, 12vw, 3.6rem);
+    letter-spacing: -0.055em;
+    overflow-wrap: normal;
+  }
   .hero h1 br { display: none; }
   .hero-lead { font-size: 1.08rem; }
   .hero-copy { font-size: 0.9rem; }
