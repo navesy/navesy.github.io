@@ -1399,23 +1399,45 @@ h1 em {
   body { padding-bottom: 68px; }
   h2 { font-size: 2.75rem; }
   .section { padding-block: 70px; }
-  .eyebrow { margin-bottom: 22px; }
+  .eyebrow { margin-bottom: 18px; font-size: 0.65rem; }
   .brand strong { font-size: 0.78rem; }
   .brand-mark { width: 34px; height: 34px; }
-  .hero { min-height: 735px; }
+  .hero { min-height: 100svh; min-height: 100dvh; }
   .hero-image { object-position: 58% center; }
-  .hero-shade { background: linear-gradient(90deg, rgba(12, 13, 11, 0.93), rgba(12, 13, 11, 0.52)), linear-gradient(0deg, rgba(10, 10, 9, 0.76), transparent 50%); }
-  .hero-content { padding-top: 98px; padding-bottom: 105px; }
+  .hero-shade {
+    background:
+      linear-gradient(180deg, rgba(12, 13, 11, 0.85) 0%, rgba(12, 13, 11, 0.55) 35%, rgba(12, 13, 11, 0.30) 55%, rgba(12, 13, 11, 0.70) 100%),
+      linear-gradient(90deg, rgba(12, 13, 11, 0.80), transparent 80%);
+  }
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 90px;
+  }
   .hero h1 {
     max-width: 100%;
-    margin-bottom: 30px;
-    font-size: clamp(2.55rem, 12vw, 3.6rem);
-    letter-spacing: -0.055em;
+    margin-bottom: 22px;
+    font-size: clamp(2.1rem, 9.5vw, 3rem);
+    line-height: 0.92;
+    letter-spacing: -0.045em;
+    word-break: normal;
     overflow-wrap: normal;
   }
-  .hero h1 br { display: none; }
-  .hero-lead { font-size: 1.08rem; }
-  .hero-copy { font-size: 0.9rem; }
+  .hero h1 br { display: block; }
+  .hero-lead {
+    max-width: 100%;
+    margin-bottom: 12px;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  .hero-copy {
+    max-width: 100%;
+    margin-bottom: 28px;
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
   .hero-actions { align-items: stretch; flex-direction: column; gap: 12px; }
   .hero-actions .button { width: 100%; }
   .hero-actions .text-link { width: max-content; }
@@ -1456,9 +1478,10 @@ h1 em {
   .faq-list details p { margin-right: 0; font-size: 0.92rem; }
   .contact-photo { min-height: 360px; height: 360px; }
   .contact-panel { padding: 65px 19px 80px; }
-  .contact-panel h2 { font-size: 3.6rem; }
-  .contact-links a { grid-template-columns: 92px 1fr 18px; gap: 10px; }
-  .contact-links strong { overflow-wrap: anywhere; font-size: 0.88rem; }
+  .contact-panel h2 { font-size: 3.2rem; line-height: 0.95; }
+  .contact-lead { font-size: 0.95rem; }
+  .contact-links a { grid-template-columns: 72px 1fr 18px; gap: 10px; }
+  .contact-links strong { overflow-wrap: anywhere; font-size: 0.82rem; }
   .contact-button { width: 100%; }
   .footer { display: none; }
   .mobile-cta {
@@ -1481,6 +1504,20 @@ h1 em {
     text-transform: uppercase;
     box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.12);
   }
+}
+
+/* Very small phones (≤ 380px) */
+@media (max-width: 380px) {
+  .hero h1 {
+    font-size: 2rem;
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+  }
+  .hero-lead { font-size: 0.92rem; }
+  .hero-copy { font-size: 0.84rem; }
+  .contact-panel h2 { font-size: 2.8rem; }
+  .estimate-copy h2 { font-size: 2.7rem; }
+  h2 { font-size: 2.4rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
